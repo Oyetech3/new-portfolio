@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --color-primary: '#0a0a0a';
+    --color-secondary: '';
+    --color-accent: '#e74c3c';
+    --color-accent-dark: '#c0392b';
+    --color-text-primary: '#ffffff';
+    --color-text-secondary: '#';
+    --color-text-muted: '';
+    --color-border-color: '';
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+    
+    html {
+      scroll-behavior: smooth;
+    }
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  
+  @layer components {
+    .gradient-purple {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .gradient-red {
+      background: linear-gradient(135deg, #f04770 0%, #f06292 100%);
+    }
+    
+    .card {
+      @apply bg-[#1a1a1a] rounded-lg border border-[#333333] transition-all duration-300;
+    }
+    
+    .card-hover {
+      @apply hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-800/20;
+    }
+    
+    .btn-primary {
+      @apply bg-[#f04770] text-white px-6 py-3 rounded font-bold transition-all duration-300 hover:bg-[#f06292] hover:-translate-y-0.5;
+    }
+    
+    .btn-secondary {
+      @apply bg-white text-[#f04770] px-8 py-4 rounded font-bold transition-all duration-300 hover:bg-gray-50 hover:-translate-y-0.5;
+    }
+    
+    .input-field {
+      @apply w-full p-3 border-none rounded bg-white/10 text-white placeholder-white/70 backdrop-blur-sm;
+    }
+  }
