@@ -33,7 +33,7 @@ export default function BlogPost({ image, date, readTime, tag, title, excerpt, h
                 
                 <h2 className="text-xl md:text-2xl font-semibold mb-4 text-[#ffffff]">
                 <Link
-                    href={href}
+                    href={`/blog/${href}`}
                     className="hover:text-[#f04770] transition-colors duration-300"
                 >
                     {title}
@@ -45,7 +45,7 @@ export default function BlogPost({ image, date, readTime, tag, title, excerpt, h
                 </p>
                 
                 <Link 
-                href={href}
+                href={`/blog/${href}`}
                 className="text-[#f04770] font-bold hover:text-[#f06292] transition-colors duration-300"
                 >
                 Read Full Article →

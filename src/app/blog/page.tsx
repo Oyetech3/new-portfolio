@@ -4,7 +4,7 @@ import BlogsPage from '../components/Blogs';
 function Blog() {
     return (
         <div>
-            <BlogsPage />  
+            <BlogsPage />
         </div>
     );
 }
