@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -23,8 +24,18 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#010109]/70 border-b border-white/10">
       <div className="flex items-center justify-between py-4 px-4 md:px-8">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-white">
-          <span className="text-[#f04770]">OYE</span>TECH
+        <Link href="/" className="text-2xl font-bold flex items-center text-white">
+          <span className="text-[#ff2e57] flex items-center gap-0">
+            <Image 
+              className="h-[1.2em] w-auto" 
+              src={'/assets/faviconn.png'} 
+              alt="logo" 
+              width={32} 
+              height={32}
+            />
+            YE
+          </span>
+          TECH
         </Link>
 
         {/* Hamburger Toggle */}

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Particles from './Particles';
+import { useRouter } from 'next/navigation';
 
 interface MousePosition {
     x: number;
@@ -16,6 +17,8 @@ interface StatItem {
 
 const HomePage: React.FC = () => {
     const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
+
+    const router = useRouter()
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent): void => {
@@ -228,7 +231,7 @@ const HomePage: React.FC = () => {
                             className="flex flex-col sm:flex-row gap-4"
                         >
                             <motion.a 
-                                href="/assets/profiles/resume.pdf" 
+                                href="/assets/profiles/my-resume.pdf" 
                                 download 
                                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#f04770] to-[#d03a64] text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-[#f04770]/25 transition-all duration-300 group"
                                 whileHover={{ 
@@ -252,7 +255,8 @@ const HomePage: React.FC = () => {
                             </motion.a>
 
                             <motion.button
-                                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 hover:border-[#f04770] transition-all duration-300"
+                                onClick={() => router.push("/projects")}
+                                className="inline-flex items-center cursor-pointer justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 hover:border-[#f04770] transition-all duration-300"
                                 whileHover={{ 
                                     scale: 1.05,
                                     borderColor: "#f04770"

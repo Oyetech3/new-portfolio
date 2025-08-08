@@ -27,11 +27,11 @@ export default function AboutPage() {
           transition={{ duration: 0.7 }}
         >
           <Image
-            src="/assets/profiles/profile.jpg"
+            src="/assets/profiles/pro2.jpg"
             alt="Profile photo"
-            width={400}
-            height={400}
-            className="w-full max-w-sm h-[400px] rounded object-cover object-top mx-auto"
+            width={500}
+            height={500}
+            className="w-full max-w-sm h-[500px] rounded object-cover object-top mx-auto"
           />
         </motion.div>
 
