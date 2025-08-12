@@ -15,6 +15,14 @@ const allProjects = [
     type: "Fullstack",
   },
   {
+    title: "Ecommerce System",
+    description: "A full-stack ecommerce web application for beaded materials - bags and others .",
+    image: "/assets/projects/mutmine.png",
+    tech: ["Laravel", "MySQL", "Blade Template", "Tailwind CSS", "PHP"],
+    liveUrl: "https://mutminebeads.onrender.com/",
+    type: "Fullstack",
+  },
+  {
     title: "Language Translator",
     description: "Real-time translation app with instant multilingual capabilities.",
     image: "/assets/projects/langtrans.png",
