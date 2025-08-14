@@ -9,7 +9,7 @@ export default function CTASection() {
       <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
         Let's build something amazing. I'm available for freelance projects and consultations.
       </p>
-      <Link href="#contact" className="btn-secondary">
+      <Link href="https://wa.me/2348022761274" className="btn-secondary">
         Get In Touch
       </Link>
     </div>

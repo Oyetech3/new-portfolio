@@ -76,11 +76,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
-      
-      <body className="bg-[#010109] text-white font-sans relative overflow-x-hidden">
       <head>
         <SEOJsonLd />
       </head>
+      
+      <body className="bg-[#010109] text-white font-sans relative overflow-x-hidden">
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 
         <div className="min-h-screen flex flex-col">

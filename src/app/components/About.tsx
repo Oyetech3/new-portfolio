@@ -67,7 +67,7 @@ export default function AboutPage() {
             className="text-gray-300 leading-relaxed text-lg"
           >
             For backend development, I work with <span className="text-[#f04770]">Node.js</span>, 
-            <span className="text-[#f04770]"> Express</span>, and <span className="text-[#f04770]">Laravel</span> 
+            <span className="text-[#f04770]"> Express</span>, and <span className="text-[#f04770]">Laravel </span> 
             to build robust server-side applications, integrating with databases like 
             <span className="text-[#f04770]"> MySQL</span> and <span className="text-[#f04770]">MongoDB</span>. 
             I'm experienced in designing and implementing <span className="text-[#f04770]">REST APIs</span> 

@@ -34,7 +34,7 @@ export default function Footer() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true }}
-      className="w-full py-10 text-center text-gray-400 text-sm border-t border-white/10 mt-28 bg-[#010109]/60 backdrop-blur-md"
+      className="w-full py-10 text-center text-gray-400 text-sm border-t border-white/10 mt-16 bg-[#010109]/60 backdrop-blur-md"
     >
       
       <div className="flex items-center justify-center gap-5 mb-6">

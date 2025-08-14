@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Subscriber {
+  id               String   @id @default(cuid())
+  email            String   @unique
+  isActive         Boolean  @default(true)
+  subscribedAt     DateTime @default(now())
+  unsubscribeToken String   @unique @default(cuid())
+  
+  @@map("subscribers")
+}

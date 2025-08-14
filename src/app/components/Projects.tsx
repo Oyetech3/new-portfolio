@@ -125,10 +125,10 @@ export default function ProjectsPage() {
 
   const filteredProjects = allProjects.filter((project) => {
     const matchesCategory = category === "All" || project.type === category;
-    const matchesTech = !activeTech || project.tech.includes(activeTech);
-    if(activeTech === "All") return project
+    const matchesTech = activeTech === "All" || !activeTech || project.tech.includes(activeTech);
     return matchesCategory && matchesTech;
   });
+  
 
   const techs = getAllTechs();
 
