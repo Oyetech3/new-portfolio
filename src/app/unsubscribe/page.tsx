@@ -1,10 +1,23 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { ApiResponse } from '@/types';
+import { Loader } from '../components/Loader';
 
 export default function UnsubscribePage() {
+  return (
+    <Suspense fallback={
+      <div className="h-screen m-auto flex items-center justify-center">
+            <Loader size="lg" />
+      </div>
+    }>
+      <UnsubscribeContent />
+    </Suspense>
+  );
+}
+
+function UnsubscribeContent() {
   const searchParams = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);

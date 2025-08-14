@@ -13,6 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://oyetech.vercel.app'),
   title: {
     default: "OYETECH — Fullstack Developer",
     template: "%s | OYETECH"
