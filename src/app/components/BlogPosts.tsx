@@ -16,9 +16,9 @@ export default function BlogPost({ image, date, readTime, tag, title, excerpt, h
     <motion.section
     
     >
-        <article className="card card-hover overflow-hidden">
-            <div className="gradient-purple h-48 flex items-center justify-center text-white text-lg font-bold">
-                {image}
+        <article className="card card-hover overflow-hidden ">
+            <div className="gradient-purple bg-[url('/assets/blogs/1.png')] bg-cover bg-center opacity-80  rounded-t-md h-48 flex items-center justify-center text-white text-lg font-bold">
+                
             </div>
             
             <div className="p-6">

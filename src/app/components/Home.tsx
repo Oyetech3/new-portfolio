@@ -225,7 +225,6 @@ const HomePage: React.FC = () => {
                             ))}
                         </motion.div>
 
-                        {/* Enhanced Buttons */}
                         <motion.div 
                             variants={itemVariants}
                             className="flex flex-col sm:flex-row gap-4"
@@ -352,7 +351,7 @@ const HomePage: React.FC = () => {
                         >
                             <Image 
                                 src="/assets/profiles/dev1.png" 
-                                alt="Developer illustration" 
+                                alt="Developer illustration"
                                 width={400} 
                                 height={400} 
                                 priority 

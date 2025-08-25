@@ -1,4 +1,3 @@
-// src/app/blog/[slug]/page.tsx
 import { getPostBySlugAction, getPostSlugsAction } from '@/lib/mdx'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -16,7 +15,7 @@ export default async function BlogPostPage({
 }: {
   params: Promise<{ slug: string }>
 }) {
-  // Await the params promise
+
   const { slug } = await params
   const post = await getPostBySlugAction(slug)
   
@@ -53,11 +52,11 @@ export default async function BlogPostPage({
             {post.frontmatter.title}
           </h1>
           
-          {post.frontmatter.excerpt && (
+          {/* {post.frontmatter.excerpt && (
             <p className="text-xl text-gray-300 leading-relaxed">
               {post.frontmatter.excerpt}
             </p>
-          )}
+          )} */}
         </header>
         
         <article className="prose prose-invert prose-lg max-w-none">

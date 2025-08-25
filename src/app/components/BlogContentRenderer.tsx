@@ -20,6 +20,7 @@ export default function BlogContentRenderer({ content }: BlogContentRendererProp
     <div 
       ref={contentRef}
       className="blog-content"
+      dangerouslySetInnerHTML={{ __html: content }}
       suppressHydrationWarning
     />
   )

@@ -1,5 +1,5 @@
 // src/lib/mdx.ts
-import { postOne } from '@/content/posts/post-one'
+import { postOne } from '@/content/posts/how-i-built-my-portfolio'
 
 export interface PostFrontmatter {
   title: string

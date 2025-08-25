@@ -41,10 +41,10 @@ const fallbackPosts: BlogPostData[] = [
   {
     slug: 'post-one',
     frontmatter: {
-      title: 'My First Blog Post',
-      date: '2024-01-15',
+      title: 'How I Built My Developer Portfolio with Next.js, Tailwind, and Vercel',
+      date: '2025-08-17',
       tag: 'Tutorial',
-      readTime: '5 min read',
+      readTime: '4 min read',
       excerpt: 'Welcome to my first blog post written in MDX with Next.js.',
     }
   }
