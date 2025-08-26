@@ -45,7 +45,7 @@ export default function AboutPage() {
             I'm Oyekola Abdulqobid Bolaji, a passionate Fullstack Developer from Nigeria.
             My focus is on building scalable, responsive, and efficient web applications
             using modern technologies. I enjoy solving real-world problems and turning
-            ideas into reality through clean, maintainable code.
+            ideas into reality through clean and maintainable code.
           </motion.p>
 
           <motion.p
@@ -70,7 +70,7 @@ export default function AboutPage() {
             <span className="text-[#f04770]"> Express</span>, and <span className="text-[#f04770]">Laravel </span> 
             to build robust server-side applications, integrating with databases like 
             <span className="text-[#f04770]"> MySQL</span> and <span className="text-[#f04770]">MongoDB</span>. 
-            I'm experienced in designing and implementing <span className="text-[#f04770]">REST APIs</span> 
+            I'm experienced in designing and implementing <span className="text-[#f04770]">REST APIs </span> 
             that power modern web applications.
           </motion.p>
 

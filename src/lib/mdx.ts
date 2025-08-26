@@ -1,8 +1,10 @@
 // src/lib/mdx.ts
 import { postOne } from '@/content/posts/how-i-built-my-portfolio'
+import { howAuthenticate } from '@/content/posts/how-to-set-up-authentication'
 
 export interface PostFrontmatter {
-  title: string
+  title: string,
+  image: string,
   date: string
   excerpt: string
   tag: string
@@ -12,17 +14,16 @@ export interface PostFrontmatter {
 export interface BlogPostData {
   slug: string
   frontmatter: PostFrontmatter
-  content?: string // Optional for listing pages
+  content?: string
 }
 
 export interface Post extends BlogPostData {
-  content: string // Required for individual post pages
+  content: string 
 }
 
-// You can add more posts here as you create them
 const allPosts: Post[] = [
   postOne,
-  // Add more posts here: postTwo, postThree, etc.
+  howAuthenticate,
 ]
 
 export async function getPostSlugsAction(): Promise<string[]> {
@@ -35,7 +36,7 @@ export async function getPostBySlugAction(slug: string): Promise<Post | null> {
 }
 
 export async function getAllPostsAction(): Promise<BlogPostData[]> {
-  // Return posts without content for listing (better performance)
+  
   return allPosts
     .map(post => ({
       slug: post.slug,

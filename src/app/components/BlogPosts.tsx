@@ -17,7 +17,7 @@ export default function BlogPost({ image, date, readTime, tag, title, excerpt, h
     
     >
         <article className="card card-hover overflow-hidden ">
-            <div className="gradient-purple bg-[url('/assets/blogs/1.png')] bg-cover bg-center opacity-80  rounded-t-md h-48 flex items-center justify-center text-white text-lg font-bold">
+            <div style={{ backgroundImage: `url(${image})` }} className={`gradient-purple bg-cover bg-center opacity-80  rounded-t-md h-48 flex items-center justify-center text-white text-lg font-bold`}>
                 
             </div>
             

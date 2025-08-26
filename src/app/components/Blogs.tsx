@@ -14,6 +14,7 @@ const fallbackPosts: BlogPostData[] = [
       title: 'Building Reusable React Components: A Complete Guide',
       date: '2024-03-15',
       tag: 'React',
+      image: '',
       readTime: '8 min read',
       excerpt: 'Learn how to create flexible, reusable React components that scale with your application and improve code maintainability.',
     }
@@ -24,6 +25,7 @@ const fallbackPosts: BlogPostData[] = [
       title: 'My Journey from Junior to Senior Developer',
       date: '2024-03-05',
       tag: 'Career',
+      image: '',
       readTime: '6 min read',
       excerpt: 'Reflections on my growth as a developer, lessons learned, and advice for aspiring developers.',
     }
@@ -34,6 +36,7 @@ const fallbackPosts: BlogPostData[] = [
       title: 'Node.js Best Practices for 2024',
       date: '2024-02-20',
       tag: 'Node.js',
+      image: '',
       readTime: '10 min read',
       excerpt: 'Essential Node.js patterns and practices every backend developer should know.',
     }
@@ -44,6 +47,7 @@ const fallbackPosts: BlogPostData[] = [
       title: 'How I Built My Developer Portfolio with Next.js, Tailwind, and Vercel',
       date: '2025-08-17',
       tag: 'Tutorial',
+      image: '',
       readTime: '4 min read',
       excerpt: 'Welcome to my first blog post written in MDX with Next.js.',
     }
@@ -55,7 +59,6 @@ export default function BlogsPage() {
   const [posts, setPosts] = useState<BlogPostData[]>([])
   const [loading, setLoading] = useState(true)
 
-  // Load posts on component mount
   useEffect(() => {
     async function loadPosts() {
       try {
@@ -131,7 +134,7 @@ export default function BlogsPage() {
                 {filteredPosts.map((post) => (
                   <BlogPost
                     key={post.slug}
-                    image={post.frontmatter.title} // Using title as image placeholder
+                    image={post.frontmatter.image} 
                     date={new Date(post.frontmatter.date).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
@@ -141,7 +144,7 @@ export default function BlogsPage() {
                     tag={post.frontmatter.tag}
                     title={post.frontmatter.title}
                     excerpt={post.frontmatter.excerpt || 'No excerpt available'}
-                    href={`${post.slug}`} // Fixed: Added /blog/ prefix
+                    href={`${post.slug}`}
                   />
                 ))}
               </div>

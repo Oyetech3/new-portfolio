@@ -173,7 +173,7 @@ const HomePage: React.FC = () => {
                                     transition: { type: "spring", stiffness: 300 }
                                 }}
                             >
-                                Oyekola Abdulqobid B.
+                                Oyekola Abdulqobid Bolaji
                             </motion.span>
                         </motion.h1>
                         
@@ -342,7 +342,7 @@ const HomePage: React.FC = () => {
                         
                         {/* Image container */}
                         <motion.div
-                            className="relative z-10 p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/20"
+                            className="relative  z-10 p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/20"
                             whileHover={{ 
                                 scale: 1.02,
                                 rotate: 1,
