@@ -1,12 +1,12 @@
 export const howAuthenticate = {
-  slug: 'how-to-set-up-authentication',
+  slug: 'how-to-set-up-authentication-in-nextjs',
   frontmatter: {
     title: 'How to Set Up Authentication in Next.js 15 with Server Actions',
     date: '2025-08-26',
     excerpt: 'Authentication is one of the most important parts of any modern web application. Whether you’re building a portfolio, SaaS platform, or an e-commerce app, you’ll need a way for users to securely sign up, log in, and manage their sessions...',
-    tag: 'Tutorial',
+    tag: 'Next.js',
     image: '/assets/blogs/2.png',
-    readTime: '3 min read'
+    readTime: '6 min read'
   },
   content: `
     <p class="text-gray-300 text-lg mb-3">
@@ -41,7 +41,7 @@ export const howAuthenticate = {
     <h2 class="text-2xl font-semibold text-white mt-10 mb-4">❓ Why Authentication Matters</h2>
     <ul class="mb-3 text-gray-300 list-disc list-inside px-2">
         <li>Keeps user data secure</li>
-        <li>Enables personalized experiences (e.g., dashboards)</li>
+        <li>Enables personalized experiences (e.g dashboards)</li>
         <li>Builds trust in your application</li>
         <li>Lays the foundation for features like payments, subscriptions, or role-based access</li>
     </ul>

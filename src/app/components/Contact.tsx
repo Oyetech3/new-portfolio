@@ -33,7 +33,6 @@ function ContactPage() {
       setSuccess(true);
       setFormData({ name: "", email: "", message: "" });
 
-      // Hide success after 5s
       setTimeout(() => setSuccess(false), 5000);
     }
   };
@@ -46,6 +45,13 @@ function ContactPage() {
       className="py-10 md:py-20 max-w-screen-sm mx-auto px-4"
     >
       <h2 className="text-4xl font-bold text-white mb-8">Contact</h2>
+
+      <div className="mb-3">
+        <p className="text-lg">Email: <a className="text-gray-300 text-base" href="mailto:oyetech30@gmail.com">oyetech30@gmail.com</a></p>
+        <p className="text-lg">Phone: <a className="text-gray-300 text-base" href="tel:+2348143011868">+2348143011868</a></p>
+      </div>
+
+      <p className="mb-8 text-gray-300">Send message directly to my gmail 👇</p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>

@@ -350,12 +350,12 @@ const HomePage: React.FC = () => {
                             }}
                         >
                             <Image 
-                                src="/assets/profiles/dev1.png" 
+                                src="/assets/profiles/newp11.png" 
                                 alt="Developer illustration"
                                 width={400} 
                                 height={400} 
                                 priority 
-                                className="w-full h-auto object-contain filter drop-shadow-2xl"
+                                className="w-full h-auto object-contain rounded-lg filter drop-shadow-2xl"
                             />
                             
                             {/* Floating elements around image */}
@@ -414,7 +414,7 @@ const HomePage: React.FC = () => {
                         whileHover={{ scale: 1.02 }}
                     >
                         <Image 
-                            src="/assets/profiles/dev1.png" 
+                            src="/assets/profiles/newp11.png" 
                             alt="Developer illustration" 
                             width={300} 
                             height={300} 

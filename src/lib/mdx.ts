@@ -1,6 +1,6 @@
 // src/lib/mdx.ts
 import { postOne } from '@/content/posts/how-i-built-my-portfolio'
-import { howAuthenticate } from '@/content/posts/how-to-set-up-authentication'
+import { howAuthenticate } from '@/content/posts/how-to-set-up-authentication-in-nextjs'
 
 export interface PostFrontmatter {
   title: string,

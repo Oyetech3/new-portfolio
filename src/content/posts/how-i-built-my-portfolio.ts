@@ -4,7 +4,7 @@ export const postOne = {
     title: 'How I Built My Developer Portfolio with Next.js, TypeScript, Tailwind and Vercel',
     date: '2025-08-17',
     excerpt: 'Every developer needs a portfolio — not just as a showcase of projects, but as a way to communicate who they are and what they can do. Earlier this year, I decided to give my old portfolio a complete makeover. My previous site ...',
-    tag: 'Tutorial',
+    tag: 'Portfolio',
     image: '/assets/blogs/1.png',
     readTime: '4 min read'
   },

@@ -9,39 +9,6 @@ import { BlogPostData, getAllPostsAction } from "@/lib/mdx";
 
 const fallbackPosts: BlogPostData[] = [
   {
-    slug: 'building-react-components',
-    frontmatter: {
-      title: 'Building Reusable React Components: A Complete Guide',
-      date: '2024-03-15',
-      tag: 'React',
-      image: '',
-      readTime: '8 min read',
-      excerpt: 'Learn how to create flexible, reusable React components that scale with your application and improve code maintainability.',
-    }
-  },
-  {
-    slug: 'career-development',
-    frontmatter: {
-      title: 'My Journey from Junior to Senior Developer',
-      date: '2024-03-05',
-      tag: 'Career',
-      image: '',
-      readTime: '6 min read',
-      excerpt: 'Reflections on my growth as a developer, lessons learned, and advice for aspiring developers.',
-    }
-  },
-  {
-    slug: 'nodejs-best-practices',
-    frontmatter: {
-      title: 'Node.js Best Practices for 2024',
-      date: '2024-02-20',
-      tag: 'Node.js',
-      image: '',
-      readTime: '10 min read',
-      excerpt: 'Essential Node.js patterns and practices every backend developer should know.',
-    }
-  },
-  {
     slug: 'post-one',
     frontmatter: {
       title: 'How I Built My Developer Portfolio with Next.js, Tailwind, and Vercel',
