@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /dashboard/
+
+# Crawl-delay: 10 (optional - if you get too many bot requests)
+
+Sitemap: https://oyetech.vercel.app/sitemap.xml
