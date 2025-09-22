@@ -1,4 +1,4 @@
-// src/lib/mdx.ts
+import { fullStactRoadmap } from '@/content/posts/fullstack-development-roadmap'
 import { postOne } from '@/content/posts/how-i-built-my-portfolio'
 import { howAuthenticate } from '@/content/posts/how-to-set-up-authentication-in-nextjs'
 
@@ -24,6 +24,7 @@ export interface Post extends BlogPostData {
 const allPosts: Post[] = [
   postOne,
   howAuthenticate,
+  fullStactRoadmap
 ]
 
 export async function getPostSlugsAction(): Promise<string[]> {

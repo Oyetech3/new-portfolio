@@ -51,7 +51,7 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <ul className="hidden sm:flex gap-8">
           {navLinks.map((link) => {
-            const active = path === link.href;
+            const active = link.href === '/' ? path === '/' : path.startsWith(link.href) ;
             return (
               <li key={link.href} className="relative group">
                 <Link

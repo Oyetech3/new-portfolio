@@ -9,6 +9,7 @@
     --color-text-secondary: '#';
     --color-text-muted: '';
     --color-border-color: '';
+    --color-pri-col: '#f04770'
 }
 
 @layer base {

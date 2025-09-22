@@ -159,5 +159,14 @@ export const howAuthenticate = {
         and more advanced security out of the box.
     </p>
 
+    <div class="mt-8 p-6 bg-gray-800/50 rounded-xl border border-gray-700">
+      <p class="text-center text-white font-semibold mb-2">
+        🫶 Thanks for reading!
+      </p>
+      <p class="text-center text-gray-400">
+        Come back soon for more posts.
+      </p>
+    </div>
+
   `
 }
