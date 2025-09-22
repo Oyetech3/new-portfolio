@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import BlogContentRenderer from '@/app/components/BlogContentRenderer'
+import ViewCounter from './ViewCounter'
 
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -18,13 +19,14 @@ export default async function BlogPostPage({
 
   const { slug } = await params
   const post = await getPostBySlugAction(slug)
-  
+ 
   if (!post) {
     notFound()
   }
 
   return (
     <div className="min-h-screen py-10 md:py-20">
+      <ViewCounter slug={slug} />
       <div className="max-w-4xl mx-auto px-4">
         <Link 
           href="/blog" 
@@ -33,6 +35,7 @@ export default async function BlogPostPage({
           <ArrowLeft size={16} />
           Back to Blog
         </Link>
+
         
         <header className="mb-8">
           <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">

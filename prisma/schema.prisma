@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
@@ -14,6 +14,17 @@ model Subscriber {
   isActive         Boolean  @default(true)
   subscribedAt     DateTime @default(now())
   unsubscribeToken String   @unique @default(cuid())
-  
+
   @@map("subscribers")
+}
+
+model PostView {
+  id         BigInt    @id @unique(map: "id") @default(autoincrement()) @db.UnsignedBigInt
+  post_slug  String    @db.VarChar(255)
+  ip_address String?   @db.VarChar(45)
+  user_agent String?   @db.Text
+  viewed_at  DateTime? @default(now()) @db.Timestamp(0)
+  session_id String?   @db.VarChar(255)
+
+  @@map("post_views")
 }
