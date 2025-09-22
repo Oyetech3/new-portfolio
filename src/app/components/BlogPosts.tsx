@@ -22,13 +22,13 @@ export default function BlogPost({ image, date, readTime, tag, title, excerpt, h
             </div>
             
             <div className="p-6">
-                <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
-                <span>{date}</span>
-                <span>•</span>
-                <span>{readTime}</span>
-                <span className="bg-[#f04770] text-white px-2 py-1 rounded text-xs font-medium">
-                    {tag}
-                </span>
+                <div className="flex items-center gap-3.5 sm:gap-4 mb-4 text-sm text-gray-400">
+                  <span>{date}</span>
+                  <span>•</span>
+                  <span>{readTime}</span>
+                  <span className="bg-[#f04770] text-white px-2 py-1 rounded text-xs font-medium">
+                      {tag}
+                  </span>
                 </div>
                 
                 <h2 className="text-xl md:text-2xl font-semibold mb-4 text-[#ffffff]">

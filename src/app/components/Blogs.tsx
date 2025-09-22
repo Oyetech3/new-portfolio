@@ -104,7 +104,7 @@ export default function BlogsPage() {
                     image={post.frontmatter.image} 
                     date={new Date(post.frontmatter.date).toLocaleDateString('en-US', {
                       year: 'numeric',
-                      month: 'long',
+                      month: 'short',
                       day: 'numeric'
                     })}
                     readTime={post.frontmatter.readTime}
