@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 
-export async function POST(req: NextRequest, { params }: { params: { slug: string } }) {
-  const slug = params.slug
+export async function POST(
+    req: NextRequest,
+    context: any
+) {
+  const { slug } = context.params
   const ip =
     req.headers.get('x-forwarded-for') ||
     req.headers.get('x-real-ip') ||
@@ -18,7 +21,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
         user_agent: ua,
       },
     })
-    
+
     const total = await db.postView.count({
       where: { post_slug: slug },
     })
@@ -30,8 +33,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
   }
 }
 
-export async function GET(_: NextRequest, { params }: { params: { slug: string } }) {
-  const slug = params.slug
+export async function GET(_: NextRequest, context: any ) {
+  const { slug } = context.params
   const total = await db.postView.count({
     where: { post_slug: slug },
   })

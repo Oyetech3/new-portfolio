@@ -38,10 +38,10 @@ export default async function BlogPostPage({
 
         
         <header className="mb-8">
-          <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
+          <div className="flex items-center gap-3 sm:gap-4 mb-4 text-sm text-gray-400">
             <span>{new Date(post.frontmatter.date).toLocaleDateString('en-US', {
               year: 'numeric',
-              month: 'long',
+              month: 'short',
               day: 'numeric'
             })}</span>
             <span>•</span>
