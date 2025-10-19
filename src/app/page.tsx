@@ -1,6 +1,7 @@
 
 import { Metadata } from 'next'
 import HomePage from './components/Home'
+import ViewCounter from './blog/[slug]/ViewCounter'
 
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+    <ViewCounter slug='home' />
     <HomePage />
     </>
   )

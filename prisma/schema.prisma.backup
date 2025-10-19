@@ -28,13 +28,3 @@ model PostView {
 
   @@map("post_views")
 }
-
-model Admin {
-  id            BigInt    @id @unique(map: "id") @default(autoincrement()) @db.UnsignedBigInt
-  email         String    @unique
-  password_hash String
-  created_at    DateTime  @default(now())
-  updated_at    DateTime  @updatedAt
-
-  @@map("admins")
-}

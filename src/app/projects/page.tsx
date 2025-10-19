@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import ProjectsPage from '../components/Projects'
+import ViewCounter from '../blog/[slug]/ViewCounter'
 
 export const metadata: Metadata = {
     title: 'Projects – OYE TECH',
@@ -10,6 +11,7 @@ export default function Projects() {
   
   return (
     <>
+      <ViewCounter slug='projects' />
       <ProjectsPage />
     </>
   )

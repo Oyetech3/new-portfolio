@@ -15,14 +15,16 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://oyetech.vercel.app'),
   title: {
-    default: "OYETECH — Fullstack Developer",
+    default: "OYETECH — Software Engineer",
     template: "%s | OYETECH"
   },
   description:
-    "Portfolio of Oyekola Abdulqobid, a Fullstack Developer specializing in modern web and mobile solutions. Explore projects, skills, and contact details.",
+    "Portfolio of Oyekola Abdulqobid, a Software Developer specializing in modern web and mobile solutions. Explore projects, skills, and contact details.",
   keywords: [
     "OYETECH",
     "Oyekola Abdulqobid Bolaji",
+    'Software Developer',
+    'Software Engineer',
     "Fullstack Developer",
     "Frontend Developer",
     "Web Developer",
