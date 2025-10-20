@@ -73,7 +73,7 @@ export default function AdminDashboard() {
 
   if (loading) {
     return (
-      <div className="flex flex-col gap-2 items-center justify-center h-screen bg-slate-900">
+      <div className="flex flex-col gap-2 items-center justify-center h-[70vh] md:h-screen bg-slate-900">
         <Loader />
         <div className="text-white text-xl">Loading analytics...</div>
       </div>
@@ -98,7 +98,7 @@ export default function AdminDashboard() {
   )
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-2.5 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className='flex justify-between'>
@@ -204,7 +204,7 @@ export default function AdminDashboard() {
               {topPages.map((page, idx) => (
                 <div key={page.slug} className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-sm font-semibold text-slate-200 truncate">
+                    <div className="text-sm font-semibold text-slate-200 ">
                       {page.slug || 'home'}
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-2 mt-2">
@@ -232,19 +232,19 @@ export default function AdminDashboard() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-slate-700">
-                  <th className="px-6 py-3 text-left text-sm font-semibold text-slate-300">Page Slug</th>
-                  <th className="px-6 py-3 text-left text-sm font-semibold text-slate-300">Views</th>
-                  <th className="px-6 py-3 text-left text-sm font-semibold text-slate-300">Last Viewed</th>
-                  <th className="px-6 py-3 text-left text-sm font-semibold text-slate-300">Action</th>
+                  <th className="md:px-6 px-3 py-3 text-left text-sm font-semibold text-slate-300">Page Slug</th>
+                  <th className="md:px-6 px-3 py-3 text-left text-sm font-semibold text-slate-300">Views</th>
+                  <th className="md:px-6 px-3 py-3 text-left text-sm font-semibold text-slate-300">Last Viewed</th>
+                  <th className="md:px-6 px-3 py-3 text-left text-sm font-semibold text-slate-300">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {pageViews.map((page) => (
                   <tr key={page.slug} className="border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors">
-                    <td className="px-6 py-4 text-sm text-slate-200">{page.slug || 'home'}</td>
-                    <td className="px-6 py-4 text-sm font-semibold text-red-400">{page.views}</td>
-                    <td className="px-6 py-4 text-sm text-slate-400">{page.lastViewed}</td>
-                    <td className="px-6 py-4 text-sm">
+                    <td className="md:px-6 px-3 py-4 text-sm text-slate-200">{page.slug || 'home'}</td>
+                    <td className="md:px-6 px-3 py-4 text-sm font-semibold text-red-400">{page.views}</td>
+                    <td className="md:px-6 px-3 py-4 text-sm text-slate-400">{page.lastViewed}</td>
+                    <td className="md:px-6 px-3 py-4 text-sm">
                       <Link
                         href={`/admin/analytics/${encodeURIComponent(page.slug || 'home')}`}
                         className="inline-flex items-center gap-2 px-3 py-1 bg-red-500/20 text-red-300 border border-red-500/30 rounded-lg hover:bg-red-500/30 transition-colors font-semibold text-xs"
