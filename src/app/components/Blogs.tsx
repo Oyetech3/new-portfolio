@@ -17,6 +17,7 @@ const fallbackPosts: BlogPostData[] = [
       image: '',
       readTime: '4 min read',
       excerpt: 'Welcome to my first blog post written in MDX with Next.js.',
+      related: ''
     }
   }
 ]

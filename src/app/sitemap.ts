@@ -1,6 +1,10 @@
+import { getAllPostsAction } from "@/lib/mdx";
 import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+
+  const blogPosts = await getAllPostsAction();
+
   const baseUrl = "https://oyetech.vercel.app";
   const lastModified = new Date();
 
@@ -43,11 +47,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.5,
       },
   
-      ...getBlogPosts().map(post => ({
+      ...blogPosts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: post.updatedAt || lastModified,
+        lastModified: new Date(post.frontmatter.date),
         changeFrequency: "monthly" as const,
-        priority: 0.6,
+        priority: 0.7,
       })),
     ];
   } catch (error) {
@@ -59,11 +63,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     }];
   }
-}
-
-function getBlogPosts() {
-  return [
-    { slug: "how-i-built-my-portfolio", updatedAt: new Date("2025-08-17") },
-    { slug: "how-to-set-up-authentication-in-nextjs", updatedAt: new Date("2025-08-26") },
-  ];
 }

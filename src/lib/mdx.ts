@@ -8,7 +8,8 @@ export interface PostFrontmatter {
   date: string
   excerpt: string
   tag: string
-  readTime: string
+  readTime: string,
+  related: string
 }
 
 export interface BlogPostData {

@@ -6,11 +6,12 @@ export const howAuthenticate = {
     excerpt: 'Authentication is one of the most important parts of any modern web application. Whether you’re building a portfolio, SaaS platform, or an e-commerce app, you’ll need a way for users to securely sign up, log in, and manage their sessions...',
     tag: 'Next.js',
     image: '/assets/blogs/2.png',
-    readTime: '6 min read'
+    readTime: '6 min read',
+    related: 'fullstack-development-roadmap'
   },
   content: `
     <p class="text-gray-300 text-lg mb-3">
-    Authentication is one of the most important parts of any modern web application. 
+    Authentication is one of the most important parts of any modern web application.
     Whether you’re building a portfolio, SaaS platform, or an e-commerce app, 
     you’ll need a way for users to securely sign up, log in, and manage their sessions.
     </p>
@@ -148,10 +149,10 @@ export const howAuthenticate = {
         Through this project, I learned:
     </p>
     <ul class="mb-3 text-gray-300 list-disc list-inside px-2">
-        <li>🔑 How powerful server actions and API routes are in Next.js 15</li>
-        <li>🛡️ How TypeScript makes authentication logic safer</li>
-        <li>🎨 How Tailwind CSS helps build clean forms quickly</li>
-        <li>☁️ How smooth deployments are on Vercel</li>
+        <li> How powerful server actions and API routes are in Next.js 15</li>
+        <li> How TypeScript makes authentication logic safer</li>
+        <li> How Tailwind CSS helps build clean forms quickly</li>
+        <li> How smooth deployments are on Vercel</li>
     </ul>
     <p class="text-gray-300 mb-3">
         This setup is great for learning and small apps. For production, 
@@ -159,14 +160,7 @@ export const howAuthenticate = {
         and more advanced security out of the box.
     </p>
 
-    <div class="mt-8 p-6 bg-gray-800/50 rounded-xl border border-gray-700">
-      <p class="text-center text-white font-semibold mb-2">
-        🫶 Thanks for reading!
-      </p>
-      <p class="text-center text-gray-400">
-        Come back soon for more posts.
-      </p>
-    </div>
+    
 
   `
 }

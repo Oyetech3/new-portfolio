@@ -6,7 +6,8 @@ export const postOne = {
     excerpt: 'Every developer needs a portfolio — not just as a showcase of projects, but as a way to communicate who they are and what they can do. Earlier this year, I decided to give my old portfolio a complete makeover. My previous site ...',
     tag: 'Portfolio',
     image: '/assets/blogs/1.png',
-    readTime: '4 min read'
+    readTime: '4 min read',
+    related: 'fullstack-development-roadmap'
   },
   content: `
     <p class="text-gray-300 text-lg mb-3">
@@ -177,13 +178,6 @@ export const postOne = {
       👉 You can check out the live site here: <strong class="text-white underline">oyetech.vercel.app</strong>
     </a>
     
-    <div class="mt-8 p-6 bg-gray-800/50 rounded-xl border border-gray-700">
-      <p class="text-center text-white font-semibold mb-2">
-        🫶 Thanks for reading!
-      </p>
-      <p class="text-center text-gray-400">
-        Come back soon for more posts.
-      </p>
-    </div>
+    
   `
 }

@@ -6,7 +6,8 @@ export const fullStactRoadmap = {
     excerpt: 'Becoming a full-stack developer means you can build entire web applications—from the polished interface a user sees to the server logic and database that power it. This guide breaks the journey into clear phases so you know what to learn, why it matters, and in what order...',
     tag: 'Full-Stack',
     image: '/assets/blogs/3.png',
-    readTime: '5 min read'
+    readTime: '5 min read',
+    related: 'how-to-set-up-authentication-in-nextjs'
   },
   content: `
     <p class="italic text-gray-200 mb-5 ">A complete guide from absolute beginner to job-ready engineer</p>
@@ -219,13 +220,6 @@ export const fullStactRoadmap = {
         <strong class="text-white">Tip:</strong> Don’t wait until you “know everything” to apply for jobs. Employers value projects and proof you can learn quickly more than a checklist of buzzwords.
        </p>
 
-       <div class="mt-8 p-6 bg-gray-800/50 rounded-xl border border-gray-700">
-        <p class="text-center text-white font-semibold mb-2">
-            🫶 Thanks for reading!
-        </p>
-        <p class="text-center text-gray-400">
-            Come back soon for more posts.
-        </p>
-       </div>
+       
   `
 }
