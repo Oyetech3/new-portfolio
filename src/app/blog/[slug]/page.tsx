@@ -113,7 +113,7 @@ export default async function BlogPostPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* <ViewCounter slug={slug} /> */}
+      <ViewCounter slug={slug} />
 
       <div className="max-w-4xl mx-auto px-4">
         <Link 
