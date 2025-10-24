@@ -1,15 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { subscriptionSchema } from '@/lib/validation';
 import type { ApiResponse } from '@/types';
 import { motion } from "framer-motion"
 import Image from 'next/image';
+import { PageViewsData } from '../admin/dashboard/page';
+import axios from 'axios'
 
 export default function Sidebar() {
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [pageViews, setPageViews] = useState<PageViewsData[]>([])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,6 +77,16 @@ export default function Sidebar() {
     { title: 'MongoDB vs MySQL: Which to Choose?', views: '8,200 views' },
     { title: 'Laravel Best Practices for 2024', views: '6,800 views' }
   ]
+
+  useEffect(() => {
+    const fetchPopularPosts = async () => {
+     const response = await axios.get('/api/analytics/pages')
+     setPageViews(response.data)
+    }
+    fetchPopularPosts()
+  }, [])
+
+  const slicePageViews = pageViews.slice(0,4)
 
   return (
     <div className="flex flex-col gap-8">
@@ -168,22 +181,27 @@ export default function Sidebar() {
       </div>
 
       {/* Popular Posts Widget */}
-      {/*<div className="card p-6">
+      <div className="card p-6">
         <h3 className="text-xl font-semibold mb-4 text-[#f04770]">🔥 Popular Posts</h3>
         <ul className="space-y-4">
-          {popularPosts.map((post, index) => (
-            <li key={index} className="pb-4 border-b border-[#333333] last:border-b-0 last:pb-0">
-              <a 
-                href="#" 
-                className="text-gray-300 hover:text-[#f06292] font-bold transition-colors duration-300 block mb-2"
-              >
-                {post.title}
-              </a>
-              <div className="text-xs text-gray-400">{post.views}</div>
+          {pageViews.map((post, index) => {
+            const blogPages = post.slug.length > 8
+            return blogPages  && (
+              <li key={index} className="pb-4 border-b border-[#333333] last:border-b-0 last:pb-0">
+                <a 
+                  href={`blog/${post.slug}`}
+                  className="text-gray-300 hover:text-[#f06292] font-bold transition-colors duration-300 block mb-2"
+                >
+                  {post.slug}
+                </a>
+                {/* <div className="text-xs text-gray-400">{post.views}</div> */}
             </li>
-          ))}
+            ) 
+          } 
+            
+          )}
         </ul>
-      </div>*/}
+      </div>
     </div>
   )
 }

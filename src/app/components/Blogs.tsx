@@ -6,6 +6,13 @@ import CTASection from "./BlogCTA";
 import BlogPost from "./BlogPosts";
 import Sidebar from "./BlogSide";
 import { BlogPostData, getAllPostsAction } from "@/lib/mdx";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const fallbackPosts: BlogPostData[] = [
   {
@@ -99,8 +106,20 @@ export default function BlogsPage() {
           <div className="grid lg:grid-cols-3 gap-8 mt-8">
             <div className="lg:col-span-2">
               <div className="flex flex-col gap-8">
-                {filteredPosts.map((post) => (
-                  <BlogPost
+              <Carousel
+      opts={{
+        align: "start",
+      }}
+      orientation="vertical"
+      className="w-full mb-14"
+    >
+      <CarouselContent className="-mt-1 h-[1950px] sm:h-[1850px] md:h-[1300px]">
+      {filteredPosts.map((post,index) => (
+                  
+                
+        
+          <CarouselItem key={index} className="pt-8 mt-1 basis-1/4 md:basis-1/3">
+          <BlogPost
                     key={post.slug}
                     image={post.frontmatter.image} 
                     date={new Date(post.frontmatter.date).toLocaleDateString('en-US', {
@@ -114,7 +133,13 @@ export default function BlogsPage() {
                     excerpt={post.frontmatter.excerpt || 'No excerpt available'}
                     href={`${post.slug}`}
                   />
-                ))}
+          </CarouselItem>
+          ))}
+      </CarouselContent>
+      <CarouselPrevious className="opacity-100 hover:opacity-100"/>
+      <CarouselNext className="opacity-100 hover:opacity-100" />
+    </Carousel>
+                
               </div>
             </div>
 

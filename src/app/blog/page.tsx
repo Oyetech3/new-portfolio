@@ -5,7 +5,7 @@ import ViewCounter from './[slug]/ViewCounter';
 function Blog() {
     return (
         <div>
-            <ViewCounter slug='blogs' />
+            {/* <ViewCounter slug='blogs' /> */}
             <BlogsPage />
         </div>
     );

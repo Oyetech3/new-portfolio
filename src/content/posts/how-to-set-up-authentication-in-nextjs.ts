@@ -5,7 +5,7 @@ export const howAuthenticate = {
     date: '2025-08-26',
     excerpt: 'Authentication is one of the most important parts of any modern web application. Whether you’re building a portfolio, SaaS platform, or an e-commerce app, you’ll need a way for users to securely sign up, log in, and manage their sessions...',
     tag: 'Next.js',
-    image: '/assets/blogs/2.png',
+    image: 'https://oyetech.vercel.app/assets/blogs/2.png',
     readTime: '6 min read',
     related: 'fullstack-development-roadmap'
   },

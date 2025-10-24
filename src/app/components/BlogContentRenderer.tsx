@@ -1,7 +1,15 @@
-// src/components/BlogContentRenderer.tsx
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Prism from 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css'
+import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-tsx'
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-css'
+
 
 interface BlogContentRendererProps {
   content: string
@@ -15,6 +23,10 @@ export default function BlogContentRenderer({ content }: BlogContentRendererProp
       contentRef.current.innerHTML = content
     }
   }, [content])
+
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
     <div 

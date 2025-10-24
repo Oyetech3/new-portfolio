@@ -14,7 +14,7 @@ interface DailyViewsData {
   uniqueVisitors: number
 }
 
-interface PageViewsData {
+export interface PageViewsData {
   slug: string
   views: number
   lastViewed: string
@@ -89,6 +89,13 @@ export default function AdminDashboard() {
   }
 
   const topPages = pageViews.slice(0, 5)
+  console.log(topPages)
+  console.log(pageViews)
+  pageViews.forEach((value: PageViewsData, index: number) => {
+    if(value.slug.length > 8) {
+      console.log(value.slug)
+    }
+  })
   const deviceBreakdown = pageViews.reduce(
     (acc, page) => {
       acc.total += page.views

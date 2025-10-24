@@ -5,7 +5,7 @@ export const postOne = {
     date: '2025-08-17',
     excerpt: 'Every developer needs a portfolio — not just as a showcase of projects, but as a way to communicate who they are and what they can do. Earlier this year, I decided to give my old portfolio a complete makeover. My previous site ...',
     tag: 'Portfolio',
-    image: '/assets/blogs/1.png',
+    image: 'https://oyetech.vercel.app/assets/blogs/1.png',
     readTime: '4 min read',
     related: 'fullstack-development-roadmap'
   },

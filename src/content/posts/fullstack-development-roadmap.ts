@@ -5,7 +5,7 @@ export const fullStactRoadmap = {
     date: '2025-09-21',
     excerpt: 'Becoming a full-stack developer means you can build entire web applications—from the polished interface a user sees to the server logic and database that power it. This guide breaks the journey into clear phases so you know what to learn, why it matters, and in what order...',
     tag: 'Full-Stack',
-    image: '/assets/blogs/3.png',
+    image: 'https://oyetech.vercel.app/assets/blogs/3.png',
     readTime: '5 min read',
     related: 'how-to-set-up-authentication-in-nextjs'
   },
@@ -19,6 +19,7 @@ export const fullStactRoadmap = {
     </p>
 
     <h2 class="text-2xl font-semibold text-white mt-10 mb-4">1️⃣ Why Full-Stack</h2>
+
 
     <div class="rounded-xl overflow-hidden  my-6">
       <p class="text-gray-300">Full-stack developers build entire web applications—the user interface and the behind-the-scenes APIs, servers, and databases.</p>

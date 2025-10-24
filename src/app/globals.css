@@ -52,6 +52,18 @@
     }
   }
 
+  pre[class*="language-"] {
+    border-radius: 12px;
+    padding: 1rem;
+    background: #0d1117;
+    font-size: 0.9rem;
+    overflow-x: auto;
+  }
+  
+  code[class*="language-"] {
+    font-family: 'Fira Code', 'Source Code Pro', monospace;
+  }
+  
   @theme inline {
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);

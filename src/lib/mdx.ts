@@ -1,6 +1,7 @@
 import { fullStactRoadmap } from '@/content/posts/fullstack-development-roadmap'
 import { postOne } from '@/content/posts/how-i-built-my-portfolio'
 import { howAuthenticate } from '@/content/posts/how-to-set-up-authentication-in-nextjs'
+import { nextjs16 } from '@/content/posts/nextjs-16-whats-new'
 
 export interface PostFrontmatter {
   title: string,
@@ -25,7 +26,8 @@ export interface Post extends BlogPostData {
 const allPosts: Post[] = [
   postOne,
   howAuthenticate,
-  fullStactRoadmap
+  fullStactRoadmap,
+  nextjs16
 ]
 
 export async function getPostSlugsAction(): Promise<string[]> {

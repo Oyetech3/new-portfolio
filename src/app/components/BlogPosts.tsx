@@ -32,12 +32,12 @@ export default function BlogPost({ image, date, readTime, tag, title, excerpt, h
                 </div>
                 
                 <h2 className="text-xl md:text-2xl font-semibold mb-4 text-[#ffffff]">
-                <Link
-                    href={`/blog/${href}`}
-                    className="hover:text-[#f04770] transition-colors duration-300"
-                >
-                    {title}
-                </Link>
+                  <Link
+                      href={`/blog/${href}`}
+                      className="hover:text-[#f04770] transition-colors duration-300"
+                  >
+                      {title}
+                  </Link>
                 </h2>
                 
                 <p className="text-gray-400 mb-4 leading-relaxed">
