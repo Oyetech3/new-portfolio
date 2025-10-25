@@ -151,20 +151,30 @@ export default function AdminDashboard() {
         </div>
 
         {/* Date Range Selector */}
-        <div className="mb-8 flex gap-4">
-          {[7, 14, 30].map((days) => (
-            <button
-              key={days}
-              onClick={() => setDateRange(days)}
-              className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
-                dateRange === days
-                  ? 'bg-red-500 text-white'
-                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-              }`}
+        <div className='flex justify-between'>
+          <div className="mb-8 flex gap-4">
+            {[7, 14, 30].map((days) => (
+              <button
+                key={days}
+                onClick={() => setDateRange(days)}
+                className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
+                  dateRange === days
+                    ? 'bg-red-500 text-white'
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                }`}
+              >
+                Last {days} days
+              </button>
+            ))}
+          </div>
+          <div>
+            <Link
+              href={'/admin/send-newsletter'}
+              className="flex items-center gap-2 px-4 py-2 text-slate-700 bg-slate-300 rounded-lg  transition-colors font-semibold disabled:opacity-50"
             >
-              Last {days} days
-            </button>
-          ))}
+              Newsletter
+            </Link>
+          </div>
         </div>
 
         {/* Charts */}
