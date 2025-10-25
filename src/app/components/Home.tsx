@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
                         ))}
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         className='pl-5 lg:pl-8'
                         style={{
                             transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)`
@@ -230,7 +230,7 @@ const HomePage: React.FC = () => {
                             className="flex flex-col sm:flex-row gap-4"
                         >
                             <motion.a 
-                                href="/assets/profiles/my-resume.pdf" 
+                                href="/assets/profiles/resume-oyetech.pdf" 
                                 download 
                                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#f04770] to-[#d03a64] text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-[#f04770]/25 transition-all duration-300 group"
                                 whileHover={{ 
@@ -294,7 +294,7 @@ const HomePage: React.FC = () => {
                                     transition={{ delay: 2 + index * 0.2 }}
                                     whileHover={{ scale: 1.1 }}
                                 >
-                                    <motion.div 
+                                    <motion.div
                                         className="text-2xl md:text-3xl font-bold text-[#f04770]"
                                         initial={{ scale: 0 }}
                                         animate={{ scale: 1 }}

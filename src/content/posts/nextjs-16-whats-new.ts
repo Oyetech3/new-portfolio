@@ -2,7 +2,7 @@ export const nextjs16 = {
     slug: 'nextjs-16-whats-new',
     frontmatter: {
       title: 'Next.js 16: What’s New and Why It’s a Game-Changer',
-      date: '2025-10-24',
+      date: '2025-10-25',
       excerpt: 'Next.js has long been the go-to framework for building modern React applications. With each release, it has introduced features that push the web forward—whether it’s hybrid rendering, file-based routing, or the powerful App Router...',
       tag: 'Next.js',
       image: 'https://oyetech.vercel.app/assets/blogs/4.png',
@@ -113,47 +113,49 @@ export async function POST(req: Request) {
         </div>
 
         <h2 class="text-2xl font-semibold text-white mt-10 mb-4">How Next.js 16 Differs from Previous Versions</h2>
-        <table class="text-gray-300 w-full border-collapse bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-        <thead>
-            <tr class="border-b-2 border-gray-600 text-white bg-gray-700">
-                <th class="px-6 py-4 text-left font-semibold align-top">Feature</th>
-                <th class="px-6 py-4 text-left font-semibold align-top">Next.js 15</th>
-                <th class="px-6 py-4 text-left font-semibold align-top">Next.js 16</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
-                <td class="px-6 py-4 font-medium text-blue-400 align-top">Bundler</td>
-                <td class="px-6 py-4 align-top">Webpack (default)</td>
-                <td class="px-6 py-4 align-top">Turbopack (default)</td>
-            </tr>
-            <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
-                <td class="px-6 py-4 font-medium text-blue-400 align-top">Data Caching</td>
-                <td class="px-6 py-4 align-top">Basic <span class="bg-gray-300 px-1 mx-2 rounded text-black">revalidateTag()</span></td>
-                <td class="px-6 py-4 align-top">Fine-grained cache APIs (<span class="bg-gray-300 px-1 mx-2 rounded text-black">updateTag</span>)</td>
-            </tr>
-            <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
-                <td class="px-6 py-4 font-medium text-blue-400 align-top">Routing Prefetch</td>
-                <td class="px-6 py-4 align-top">Prefetch whole pages</td>
-                <td class="px-6 py-4 align-top">Incremental prefetch (faster, smaller)</td>
-            </tr>
-            <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
-                <td class="px-6 py-4 font-medium text-blue-400 align-top">React Support</td>
-                <td class="px-6 py-4 align-top">React 18</td>
-                <td class="px-6 py-4 align-top">React 19 support (exp)</td>
-            </tr>
-            <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
-                <td class="px-6 py-4 font-medium text-blue-400 align-top">Deployment Targets</td>
-                <td class="px-6 py-4 align-top">Vercel-first</td>
-                <td class="px-6 py-4 align-top">Build Adapters for multi-platform</td>
-            </tr>
-            <tr class="hover:bg-gray-750 transition-colors">
-                <td class="px-6 py-4 font-medium text-blue-400 align-top">AMP</td>
-                <td class="px-6 py-4 align-top">Supported</td>
-                <td class="px-6 py-4 align-top">Removed</td>
-            </tr>
-        </tbody>
-       </table>
+        <div class="overflow-x-auto">
+            <table class="text-gray-300 w-full border-collapse bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+            <thead>
+                <tr class="border-b-2 border-gray-600 text-white bg-gray-700">
+                    <th class="px-6 py-4 text-left font-semibold align-top">Feature</th>
+                    <th class="px-6 py-4 text-left font-semibold align-top">Next.js 15</th>
+                    <th class="px-6 py-4 text-left font-semibold align-top">Next.js 16</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
+                    <td class="px-6 py-4 font-medium text-blue-400 align-top">Bundler</td>
+                    <td class="px-6 py-4 align-top">Webpack (default)</td>
+                    <td class="px-6 py-4 align-top">Turbopack (default)</td>
+                </tr>
+                <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
+                    <td class="px-6 py-4 font-medium text-blue-400 align-top">Data Caching</td>
+                    <td class="px-6 py-4 align-top">Basic <span class="bg-gray-300 px-1 mx-2 rounded text-black">revalidateTag()</span></td>
+                    <td class="px-6 py-4 align-top">Fine-grained cache APIs (<span class="bg-gray-300 px-1 mx-2 rounded text-black">updateTag</span>)</td>
+                </tr>
+                <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
+                    <td class="px-6 py-4 font-medium text-blue-400 align-top">Routing Prefetch</td>
+                    <td class="px-6 py-4 align-top">Prefetch whole pages</td>
+                    <td class="px-6 py-4 align-top">Incremental prefetch (faster, smaller)</td>
+                </tr>
+                <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
+                    <td class="px-6 py-4 font-medium text-blue-400 align-top">React Support</td>
+                    <td class="px-6 py-4 align-top">React 18</td>
+                    <td class="px-6 py-4 align-top">React 19 support (exp)</td>
+                </tr>
+                <tr class="border-b border-gray-600 hover:bg-gray-750 transition-colors">
+                    <td class="px-6 py-4 font-medium text-blue-400 align-top">Deployment Targets</td>
+                    <td class="px-6 py-4 align-top">Vercel-first</td>
+                    <td class="px-6 py-4 align-top">Build Adapters for multi-platform</td>
+                </tr>
+                <tr class="hover:bg-gray-750 transition-colors">
+                    <td class="px-6 py-4 font-medium text-blue-400 align-top">AMP</td>
+                    <td class="px-6 py-4 align-top">Supported</td>
+                    <td class="px-6 py-4 align-top">Removed</td>
+                </tr>
+            </tbody>
+        </table>
+       </div>
        <p class="text-gray-300 mb-3">In short: <strong class="text-white">faster, leaner, more flexible.</strong></p>
 
        <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Migration Considerations</h2>

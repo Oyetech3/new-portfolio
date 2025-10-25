@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { format } from 'date-fns'
-import { ChevronLeft, Globe, Smartphone, Monitor } from 'lucide-react'
+import { ChevronLeft, Globe, Smartphone, Monitor, Eye, Globe2, Earth, EarthLock, MonitorSmartphone } from 'lucide-react'
 import { Loader } from '@/app/components/Loader'
 
 interface VisitorDetail {
@@ -121,10 +121,10 @@ export default function PageDetailsAnalytics() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <StatCard label="Total Views" value={visitors.length} icon="👁️" />
-          <StatCard label="Unique Countries" value={countries.length} icon="🌍" />
-          <StatCard label="Browsers" value={browsers.length} icon="🌐" />
-          <StatCard label="Device Types" value={devices.length} icon="📱" />
+          <StatCard label="Total Views" value={visitors.length} icon= {<Eye />} />
+          <StatCard label="Unique Countries" value={countries.length} icon= {<Globe/>} />
+          <StatCard label="Browsers" value={browsers.length} icon= {<EarthLock />} />
+          <StatCard label="Device Types" value={devices.length} icon= {<MonitorSmartphone />} />
         </div>
 
         {/* Filters */}
@@ -246,7 +246,7 @@ export default function PageDetailsAnalytics() {
   )
 }
 
-function StatCard({ label, value, icon }: { label: string; value: number; icon: string }) {
+function StatCard({ label, value, icon }: { label: string; value: number; icon: any }) {
   return (
     <div className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-xl p-4">
       <div className="flex items-center justify-between mb-2">
