@@ -112,7 +112,7 @@ export default function AdminDashboard() {
 
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-white mb-2">Analytics Dashboard</h1>
-            <p className="text-slate-300">Track your portfolio website traffic and engagement</p>
+            <p className="text-slate-300">Tracking traffic and engagement</p>
           </div>
 
           <div className="">
