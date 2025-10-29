@@ -151,7 +151,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Date Range Selector */}
-        <div className='flex-col gap-4 md:flex justify-between'>
+        <div className='flex justify-between'>
           <div className="mb-8 flex gap-4">
             {[7, 14, 30].map((days) => (
               <button
@@ -167,7 +167,7 @@ export default function AdminDashboard() {
               </button>
             ))}
           </div>
-          <div>
+          <div className='hidden md:block'>
             <Link
               href={'/admin/send-newsletter'}
               className="flex items-center gap-2 px-4 py-2 text-slate-700 bg-slate-300 rounded-lg  transition-colors font-semibold disabled:opacity-50"
@@ -175,6 +175,15 @@ export default function AdminDashboard() {
               Newsletter
             </Link>
           </div>
+        </div>
+
+        <div className='block md:hidden mb-5 w-fit'>
+            <Link
+              href={'/admin/send-newsletter'}
+              className="flex items-center gap-2 px-4 py-2 text-slate-700 bg-slate-300 rounded-lg  transition-colors font-semibold disabled:opacity-50"
+            >
+              Newsletter
+            </Link>
         </div>
 
         {/* Charts */}
