@@ -75,13 +75,27 @@ export const postOne = {
       I used <span class="font-semibold text-white">Framer Motion</span> to add subtle animations — things like fade-ins, slide-ups, and hover effects. For example:
     </p>
     
-    <div class="rounded-xl overflow-hidden border border-gray-800 shadow-xl my-6">
-      <img
-        src="/assets/blogs/motion.png"
-        alt="A project preview"
-        class="w-full h-auto object-cover"
-      />
-    </div>
+    <pre class="bg-[#0d1117] text-gray-100 p-4 rounded-xl overflow-x-auto text-sm">
+        <code class="language-ts">
+import { motion } from "framer-motion";  
+
+export default function Hero() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="text-center mt-20"
+    >
+      <h1 className="text-4xl font-bold">Hi, I'm Oyetech 👋</h1>
+      <p className="mt-4 text-lg text-gray-400">
+        A web developer building modern and user-friendly apps.
+      </p>
+    </motion.div>
+  );
+}
+        </code>
+    </pre>
 
     <div>
       <h2 class="text-2xl font-semibold text-white mt-10 mb-4">👎 Challenges I Faced</h2>

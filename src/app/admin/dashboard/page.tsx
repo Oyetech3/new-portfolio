@@ -151,7 +151,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Date Range Selector */}
-        <div className='flex justify-between'>
+        <div className='flex-col gap-4 md:flex justify-between'>
           <div className="mb-8 flex gap-4">
             {[7, 14, 30].map((days) => (
               <button
