@@ -7,6 +7,14 @@ import Link from "next/link";
 
 const allProjects = [
   {
+    title: "Tarikh Knowledge",
+    description: "A Full-Stack Islamic History, Civilization and Educational Web Platform",
+    image: "/assets/projects/tarikh.png",
+    tech: ["Next.js", "Strapi CMS", "Prisma", "TypeScript", "PostgreSQL", "SEO", "Tailwind CSS"],
+    liveUrl: "https://tarikhknowledge.com/",
+    type: "Fullstack",
+  },
+  {
     title: "School Management System",
     description: "A comprehensive full-stack web application for educational institution management.",
     image: "/assets/projects/school.png",
